@@ -1,0 +1,7 @@
+<h1>Listado de Tareas</h1>
+<%= link_to 'Agregar tarea', new_task_path %>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.description %></li>
+  <% end %>
+</ul>
