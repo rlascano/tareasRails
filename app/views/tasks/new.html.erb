@@ -1,9 +1,2 @@
-<%= form_with model: @task, local: true do |form| %>
-
-  <p>
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-    <%= form.submit %>
-  </p>  
-
-<% end %>
+<h1>Nueva Tarea</h1>
+<%= render 'form' %>
