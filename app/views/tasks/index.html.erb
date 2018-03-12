@@ -1,18 +1,14 @@
 <h1>Listado de Tareas</h1>
 <%= link_to 'Agregar tarea', new_task_path, id:"new_link", remote: true %>
-<h2>Incomplete Tasks</h2>
+<h2>Tareas sin Terminar</h2>
 <ul id="incomplete_tasks">
-  <% @tasks.each do |task| %>
-    <% if !task.completed %>
-      <%= render(task) %>
-    <% end %>
+  <% @tasksIncompleted.each do |task| %>
+    <%= render(task) %>
   <% end %>
 </ul>
-<h2>Complete Tasks</h2>
+<h2>Tareas Terminadas</h2>
 <ul id="complete_tasks">
-  <% @tasks.each do |task| %>
-    <% if task.completed %>
-      <%= render(task) %>
-    <% end %>
+  <% @tasksCompleted.each do |task| %>
+    <%= render(task) %>
   <% end %>
 </ul>
