@@ -1,6 +1,6 @@
-<%= form_for task do |f| %>
+<%= form_for task, remote: true, authenticity_token: true do |f| %>
   <%= f.check_box :completed %>
-  <%= f.submit "Actualizar" %>
+  <%= f.submit  %>
   <%= f.label :completed, task.description %>
   <%= link_to "(eliminar)", task, method: :delete, data: {confirm: "Seguro?"},
     remote: true %>
