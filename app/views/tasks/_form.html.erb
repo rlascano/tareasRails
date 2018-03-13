@@ -1,4 +1,4 @@
-<%= form_with model: @task, id: 'new_task' do |form|  %>
+<%= form_for @task, id: 'new_task', remote: true do |form|  %>
   <p>
     <%= form.label :description %>
     <%= form.text_field :description %>
