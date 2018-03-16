@@ -21,7 +21,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update_attributes!(task_params)
     respond_to do |format|
-      format.html { redirect_to tasks_url }
+      format.html { redirect_to root_url }
       format.js
     end
   end
