@@ -1,5 +1,5 @@
 <% if @task.completed? %>
-  $('#edit_task_<%= @task.id %>').appendTo('#completed_tasks')
+  $("#edit_task_<%= @task.id %>").appendTo("#completed_tasks")
 <% else %>
-  $('#edit_task_<%= @task.id %>').appendTo('#incompleted_tasks')
+  $("#edit_task_<%= @task.id %>").appendTo("#incompleted_tasks")
 <% end %>
