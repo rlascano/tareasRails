@@ -1,10 +1,18 @@
-<h1>Listado de Tareas</h1>
-<%= link_to 'Agregar tarea', new_task_path, id:"new_link", remote: true %>
-<h2>Tareas Pendientes</h2>
-<div id="incompleted_tasks">
-  <%= render(@tasksIncompleted) %>
-</div>
-<h2>Tareas Finalizadas</h2>
-<div id="completed_tasks">
-  <%= render(@tasksCompleted) %>
+<div class="row bg-white">
+  <div class="col-md-6 col-md-offset-2">
+    <h1>Administrador de Tareas</h1>
+    <br/>
+    <%= link_to 'Agregar tarea', new_task_path, id:"new_link", class:"btn btn-primary",
+      remote: true %>
+    <br/>
+    <h2>Tareas Pendientes</h2>
+    <div id="incompleted_tasks">
+      <%= render(@tasksIncompleted) %>
+    </div>
+    <hr />
+    <h2>Tareas Finalizadas</h2>
+    <div id="completed_tasks">
+      <%= render(@tasksCompleted) %>
+    </div>
+  </div>
 </div>

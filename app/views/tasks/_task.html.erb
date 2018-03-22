@@ -2,6 +2,6 @@
   <%= f.check_box :completed %>
   <%= f.submit  %>
   <%= f.label :completed, task.description %>
-  <%= link_to "(eliminar)", task, method: :delete, data: {confirm: "Seguro?"},
-    remote: true %>
+  <%= link_to "x", task, class:"btn btn-danger",method: :delete, data: {confirm: "Seguro?"},
+      remote: true %>
 <% end %>
